@@ -28,6 +28,7 @@ proguard/
 *.iws
 *.idea
 *.iml
+app/*.iml
 .gradle
 
 # osx
