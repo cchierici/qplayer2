@@ -333,17 +333,19 @@ public class PlayerFragment extends AbstractBaseFragment
     private void cleanupPlayer() {
         Timber.d("cleanupPlayer():");
 
-        if (showRemainingTime)
-            textDynamicTime.setText("remain: " +
-                TrackUtils.milisecondsToTimeFormattedString(0));
-        else
-            textDynamicTime.setText("current: " +
-                TrackUtils.milisecondsToTimeFormattedString(0));
-
-        textTotalTime.setText("total: " +
-            TrackUtils.milisecondsToTimeFormattedString(0));
-        textCurrentTrack.setText(getString(R.string.player_no_track_loaded));
-        
+        if (textDynamicTime != null
+            && textTotalTime != null
+            && textCurrentTrack != null) {
+            if (showRemainingTime) {
+                textDynamicTime.setText(
+                    "remain: " + TrackUtils.milisecondsToTimeFormattedString(0));
+            } else {
+                textDynamicTime.setText(
+                    "current: " + TrackUtils.milisecondsToTimeFormattedString(0));
+            }
+            textTotalTime.setText("total: " + TrackUtils.milisecondsToTimeFormattedString(0));
+            textCurrentTrack.setText(getString(R.string.player_no_track_loaded));
+        }
         if (player != null) {
             
             resetUpdateTimer();
