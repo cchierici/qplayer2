@@ -60,8 +60,8 @@ public class QPlayerMainActivityTest {
         imageButton2.perform(click());
 
         ViewInteraction imageButton3 = onView(
-            allOf(withId(org.qstuff.qplayer.dev.R.id.player_button_repeat),
-                  withParent(withId(org.qstuff.qplayer.dev.R.id.player_buttons_row_two)),
+            allOf(withId(org.qstuff.qplayer.R.id.player_button_repeat),
+                  withParent(withId(org.qstuff.qplayer.R.id.player_buttons_row_two)),
                   isDisplayed()));
         imageButton3.perform(click());
 
