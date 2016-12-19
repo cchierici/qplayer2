@@ -3,7 +3,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         applicationId "org.qstuff.qplayer"
@@ -12,6 +12,7 @@ android {
         targetSdkVersion 23
         versionCode 13
         versionName "1.0.0"
+
 
         ndk {
             moduleName "opensles_wrap"
